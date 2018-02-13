@@ -4,10 +4,6 @@
 		session_start();
 		$error=''; //Variable to Store error message;
 
-		$user = "";
-		$pass = "";
-			
-
 			if(isset($_POST['submit'])){
  				if(empty($_POST['uname']) || empty($_POST['upass'])){
  				$error = "Fill out both fields";
@@ -17,10 +13,10 @@
 				$user = $_POST['uname'];
  				$pass = $_POST['upass'];
  				
- 				//$user = stripslashes($user);
- 				//$pass = stripslashes($pass);
- 				//$user = mysql_real_escape_string($user);
- 				//$pass = mysql_real_escape_string($pass);
+ 				$user = stripslashes($user);
+ 				$pass = stripslashes($pass);
+ 				$user = mysql_real_escape_string($user);
+ 				$pass = mysql_real_escape_string($pass);
  				$m5pass = md5($pass);
 
 			$conn = mysqli_connect("localhost", "root", "");
@@ -115,6 +111,7 @@
       <input type="submit" value="login" class="btn btn-primary btn-block"></button>
       <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button>
     </form>
+    <?php echl ?>
   </div>
 </div>
 <script type="text/javascript">
