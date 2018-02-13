@@ -61,7 +61,7 @@
 
         <div class="container-fluid laboy-content">
           <h1 class="page-header">Dashboard</h1>
-          <?php echo "gago"; ?>
+          <?php echo "githubtest"; ?>
 
             </div>
           </div>
