@@ -111,7 +111,7 @@
       <input type="submit" value="login" class="btn btn-primary btn-block"></button>
       <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button>
     </form>
-    <?php echl ?>
+    <?php echo "TEST"; ?>
   </div>
 </div>
 <script type="text/javascript">
