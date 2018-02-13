@@ -9,11 +9,11 @@ $con = mysqli_connect($db['host'], $db['username'], $db['password']) OR die(mysq
 $sql = mysqli_select_db($con, $db['database']) OR die(mysqli_connect_error());
 
 if(!$con){
-    echo 'Connection Error to Server';
+    echo "Connection Error to Server";
 }	
 
 if(!mysqli_select_db($con, 'db_laboybaboy')){
-    echo 'Database not selected';
+    echo "Database not selected";
 }
 
 date_default_timezone_set('Asia/Manila');

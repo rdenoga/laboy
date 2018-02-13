@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <?php
-      	include 'config/init.php';
+      	include 'config\init.php';
 		session_start();
 		$error=''; //Variable to Store error message;
 
@@ -19,9 +19,9 @@
  				$pass = mysql_real_escape_string($pass);
  				$m5pass = md5($pass);
 
-			$conn = mysqli_connect("localhost", "root", "");
+			//$conn = mysqli_connect("localhost", "root", "");
 
- 			$db = mysqli_select_db($conn, "db_laboybaboy");
+ 			//$db = mysqli_select_db($conn, "db_laboybaboy");
 
  			$query = mysqli_query($con, "SELECT * FROM tbl_user WHERE cpassword='$m5pass' AND cusername='$user'");
 
@@ -108,12 +108,12 @@
       </div>    
       <p></p>
 
-      <input type="submit" value="login" class="btn btn-primary btn-block"></button>
-      <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button>
+      <input type="submit" value="login" class="btn btn-primary btn-block"></button>  
+      <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button></div>
     </form>
-    <?php echo "TEST"; ?>
+
   </div>
-</div>
+
 <script type="text/javascript">
 	
 </script>
