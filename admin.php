@@ -41,9 +41,9 @@
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
             <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Reports</a></li>
-            <li><a href="#">Analytics</a></li>
-            <li><a href="#">Export</a></li>
+            <li><a href="admin.php?page=reports">Reports</a></li>
+            <li><a href="admin.php?page=analytics">Analytics</a></li>
+            <li><a href="admin.php?page=export">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
             <li><a href="">Nav item</a></li>
@@ -60,8 +60,21 @@
         </div>
 
         <div class="container-fluid laboy-content">
-          <h1 class="page-header">Dashboard</h1>
-          <?php echo "githubtest"; ?>
+          <div class="content">
+            <?php
+
+                $p = $_GET['page'];
+
+                $page = $p . ".php";
+
+                if(file_exists($page))
+                    include($page);
+                else
+                    echo "DI GUMANA";
+
+
+            ?>
+          </div>
             </div>
           </div>
  
