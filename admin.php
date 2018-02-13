@@ -61,12 +61,7 @@
 
         <div class="container-fluid laboy-content">
           <h1 class="page-header">Dashboard</h1>
-<<<<<<< HEAD
-          <?php "testgithub";?>
-=======
           <?php echo "githubtest"; ?>
-
->>>>>>> 295f861c39e11476551b095434ee4fdaa74150b5
             </div>
           </div>
  
