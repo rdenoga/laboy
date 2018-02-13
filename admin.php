@@ -69,6 +69,8 @@
 
                 if(file_exists($page))
                     include($page);
+                elseif($page=="")
+                    echo "Empty Page";
                 else
                     echo "DI GUMANA";
 
