@@ -1,0 +1,210 @@
+<?php 
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>LaboyBaboyTours</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  </head>
+  <body>
+    
+  <!--navbar-->
+      <nav class="navbar navbar-inverse navbar-fixed-top" id="laboy-navbar">
+          <div class="container">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                </button>
+                <a href="#Home" class="navbar-brand">Laboy Baboy Tours</a>
+                <img alt="brand" src="img/lbtlogo.png">
+              </div><!--nav header-->
+              <div class="collapse navbar-collapse" id="navbar-collapse">
+                  <ul class="nav navbar-nav">
+                    <li><a class="link" href="#Home">Home</a>
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="tours.php">Tours
+                      <span class="caret"></span></a>
+                      <ul class="dropdown-menu">
+                        <li><a href="tours.php#Hiking">Hiking</a></li>
+                        <li><a href="tours.php#Beach">Beach</a></li>
+                        <li><a href="tours.php#Heritage">Heritage</a></li>
+                      </ul>
+                    </li>
+                    <li><a class="link" href="#AboutUs">About Us</a>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                  <li><a class="link" href="#"><span class="glyphicon glyphicon-credit-card"></span> Payments</a></li>
+                  <li><a class="link" href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  </ul>
+              </div>
+          </div><!--e cont-->
+      </nav><!--e nav-->
+
+
+
+  <!--gallery carousel-->
+      <div class="container-fluid">
+          <section>
+              <div class="page-header" id="Home">
+              </div>
+              <div class="carousel slide" id="screenshot-carousel" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                      <li data-target="#screenshot-carousel" data-slide-to="0" class="active"></li>
+                      <li data-target="#screenshot-carousel" data-slide-to="1"></li>
+                      <li data-target="#screenshot-carousel" data-slide-to="2"></li>
+                  </ol>
+              
+              <div class="carousel-inner" role="listbox">
+                  <div class="item active">
+                    <img class="first-slide" src="img/image1.jpg" alt="First slide">
+                    <div class="container">
+                      <div class="carousel-caption">
+                        <h1>Be a Storyteller.</h1>
+                        <p>Storyteller, story teller, or story-teller may refer to: Narrator, a storyteller within a story. Oral storytelling, traditional relation of history and culture. Storytelling, the conveying of events in words, images and sounds, often by improvisation or embellishment.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Book Now</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img class="second-slide" src="img/image2.jpg" alt="Second slide">
+                    <div class="container">
+                      <div class="carousel-caption">
+                        <h1>Make Friends</h1>
+                        <p>If you make friends with someone, you begin a friendship with them. You can also say that two people make friends.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item">
+                    <img class="third-slide" src="img/image3.jpg" alt="Third slide">
+                    <div class="container">
+                      <div class="carousel-caption">
+                        <h1>One more for good measure.</h1>
+                        <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
+                      </div>
+                    </div>
+                  </div>
+              </div><!--end inner-->
+                <!-- Controls -->
+                  <a class="left carousel-control" href="#screenshot-carousel" data-slide="prev">
+                    <span class="icon-prev"></span>
+                  </a>
+                  <a class="right carousel-control" href="#screenshot-carousel" data-slide="next">
+                    <span class="icon-next"></span>
+                  </a>
+              </div><!--end carou-->
+      </section>
+      </div>
+
+
+<!--features-->
+
+<hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Beach <span class="text-muted">Feel the Breeze</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="img/beach.jpg" alt="Generic placeholder image" height="500" width="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7 col-md-push-5">
+          <h2 class="featurette-heading">Hiking <span class="text-muted">See for yourself.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5 col-md-pull-7">
+          <img class="featurette-image img-responsive center-block" src="img/hiking.jpg" alt="Generic placeholder image" height="500" width="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Heritage <span class="text-muted">Reminisce.</span></h2>
+          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        </div>
+        <div class="col-md-5">
+          <img class="featurette-image img-responsive center-block" src="img/heritage.jpg" alt="Generic placeholder image" height="500" width="500">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+  <!--features end-->
+
+  <!--abtus-->
+    <div class="container">
+        <section>
+            <div class="page-header" id="AboutUs">
+              <h2>About Us</h2><small>History and Groups of Owners</small>
+            </div>
+            <div class="row">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl urna, laoreet vel urna dictum, dignissim lobortis ex. Vivamus odio eros, porttitor at porta ut, iaculis nec purus.</p>
+            </div>
+            <div class="row">
+              <div class="col-lg-4">
+                <img class="img-circle" src="img/hiking.jpg" height="150" width="150" alt="Owner 1">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl urna, laoreet vel urna dictum, dignissim lobortis ex. Vivamus odio eros, porttitor at porta ut, iaculis nec purus.</p>
+                  </blockquote>
+                  <footer>Bryan</footer>
+              </div>
+              <div class="col-lg-4">
+                <img class="img-circle" src="img/beach.jpg" height="150" width="150" alt="Owner 2">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl urna, laoreet vel urna dictum, dignissim lobortis ex. Vivamus odio eros, porttitor at porta ut, iaculis nec purus.</p>
+                  </blockquote>
+                  <footer>Emmanuel</footer>
+              </div>
+              <div class="col-lg-4">
+                <img class="img-circle" src="img/heritage.jpg" height="150" width="150" alt="Owner 3">
+                  <blockquote>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nisl urna, laoreet vel urna dictum, dignissim lobortis ex. Vivamus odio eros, porttitor at porta ut, iaculis nec purus.</p>
+                  </blockquote>
+                  <footer>Yumi</footer>
+              </div>
+            </div><!--end row-->
+    </div>   
+
+    <!-- jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/JavaScript">
+        $('#screenshot-carousel').carousel({
+           interval: 2000,
+          cycle: true
+          }); 
+
+        $('ul.nav li.dropdown').hover(function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
+        }, function() {
+          $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
+        });
+      </script>
+
+  </body>
+</html>
