@@ -40,12 +40,14 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li class="active"><a href="admin.php?page=">Overview <span class="sr-only">(current)</span></a></li>
             <li><a href="admin.php?page=reports">Reports</a></li>
+            <li><span></span></li>
             <li><a href="admin.php?page=analytics">Analytics</a></li>
             <li><a href="admin.php?page=export">Export</a></li>
+
           </ul>
-          <ul class="nav nav-sidebar">
+          <!--<ul class="nav nav-sidebar">
             <li><a href="">Nav item</a></li>
             <li><a href="">Nav item again</a></li>
             <li><a href="">One more nav</a></li>
@@ -56,7 +58,7 @@
             <li><a href="">Nav item again</a></li>
             <li><a href="">One more nav</a></li>
             <li><a href="">Another nav item</a></li>
-          </ul>
+          </ul>-->
         </div>
 
         <div class="container-fluid laboy-content">
@@ -69,12 +71,10 @@
 
                 if(file_exists($page))
                     include($page);
-                elseif($page=="")
-                    echo "Empty Page";
+                elseif($p=="")
+                    header('admin.php');
                 else
-                    echo "DI GUMANA";
-
-
+                    header('admin.php');
             ?>
           </div>
             </div>
