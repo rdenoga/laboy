@@ -10,8 +10,8 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 
@@ -45,6 +45,7 @@
                   <ul class="nav navbar-nav navbar-right">
                   <li><a class="link" href="#"><span class="glyphicon glyphicon-credit-card"></span> Payments</a></li>
                   <li><a class="link" href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  <li><a href="#booking" data-toggle="modal"><button type="button" class="btn btn-info">Book Now</button></a></li>
                   </ul>
               </div>
           </div><!--e cont-->
@@ -158,8 +159,6 @@
             </div><!--end row-->
     </div>   
 
-
-
     <!-- jQuery  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     
@@ -172,5 +171,70 @@
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
         });
       </script>
+
+    <div class="modal fade" id="booking" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form class="form-horizontal">
+          <div class="modal-header">
+              <h3>Booking Form</h3>
+              <h3>Contact Details</h3>
+              <hr>
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="book-name" class="col-sm-2 control-label">Name</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="book-name" placeholder="Full Name">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="book-name" class="col-sm-2 control-label">Address</label>
+                  <div class="col-sm-10">
+                    <input type="text" class="form-control" id="book-name" placeholder="Address">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="book-name" class="col-sm-2 control-label">Contact Number</label>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="book-name" placeholder="Contact Number">
+                  </div>
+                  <div class="col-sm-5">
+                    <input type="text" class="form-control" id="book-name" placeholder="Optional">
+                  </div>
+                  </div>
+                  <hr>
+                  <h3>Tour Details</h3>
+                  <hr>
+                  <div class="form-group">
+                    <label for="book-despref" class="col-sm-2 control-label">Destination Preference</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="book-despref">
+                        <!--query goes here-->
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group dest hide">
+                    <label for="book-despref" class="col-sm-2 control-label">Destination</label>
+                    <div class="col-sm-6">
+                      <select class="form-control" id="book-despref">
+                        <!--query goes here-->
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                      </select>
+                    </div>
+                  </div>
+
+            </div>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+
+
 </body>
 </html>

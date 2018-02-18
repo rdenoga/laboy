@@ -1,3 +1,8 @@
+*{
+	margin:0;
+	padding: 0;
+}
+
 body{
 
 	padding-top: 20px;
@@ -81,3 +86,16 @@ blockquote {
 .laboy-side li a:hover{
 	background:#ffffff;
 }
+
+.modal-header hr {
+
+	display: block;
+	margin-top: 2;
+	margin-bottom: 2;
+	margin-right: auto;
+	margin-left: auto;;
+	border :none;
+	height: 2px;
+}
+
+
