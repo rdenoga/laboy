@@ -205,21 +205,21 @@
                   <hr>
                   <h3>Tour Details</h3>
                   <hr>
-                  <div class="form-group">
+                  <div class="form-group dp">
                     <label for="book-despref" class="col-sm-2 control-label">Destination Preference</label>
                     <div class="col-sm-6">
-                      <select class="form-control" id="book-despref">
+                      <select class="form-control" id="book-dp">
                         <!--query goes here-->
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                       </select>
                     </div>
                   </div>
-                  <div class="form-group dest hide">
-                    <label for="book-despref" class="col-sm-2 control-label">Destination</label>
+                  <div class="form-group book-des hide">
+                    <label for="book-des" class="col-sm-2 control-label">Destination</label>
                     <div class="col-sm-6">
-                      <select class="form-control" id="book-despref">
+                      <select class="form-control" id="book-des">
                         <!--query goes here-->
                         <option>1</option>
                         <option>2</option>
@@ -235,6 +235,18 @@
       </div>
     </div>
 
+<script>
+  $(document).ready(function()
+  {
+    $('#book-dp').change(function(){
+        var selectedValue = $(this).val();
+        if(selectedValue) =='1');
+      $('#book-des').show();
+    });
+
+  });
+
+</script>
 
 </body>
 </html>
