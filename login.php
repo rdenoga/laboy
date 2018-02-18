@@ -1,44 +1,35 @@
 <!DOCTYPE html>
-<?php
-      	include 'config\init.php';
-		session_start();
-		$error=''; //Variable to Store error message;
+<div class="phpclass">
+	<?php
+		$host = "localhost";
+		$user = "root";
+		$pass = "";
+		$db = "db_laboybaboy";
 
-			if(isset($_POST['submit'])){
- 				if(empty($_POST['uname']) || empty($_POST['upass'])){
- 				$error = "Fill out both fields";
- 				}
- 				else{
- 				//Define $user and $pass
-				$user = $_POST['uname'];
- 				$pass = $_POST['upass'];
- 				
- 				$user = stripslashes($user);
- 				$pass = stripslashes($pass);
- 				$user = mysql_real_escape_string($user);
- 				$pass = mysql_real_escape_string($pass);
- 				$m5pass = md5($pass);
+		mysql_connect($host, $user, $pass);
+		mysql_select_db($db);
 
-			//$conn = mysqli_connect("localhost", "root", "");
+		if (isset($_POST['username'])) {
+			$uname = $_POST['username'];
+			$upass = $_POST['userpass'];
 
- 			//$db = mysqli_select_db($conn, "db_laboybaboy");
+			$sqlquery = "Select * from tbl_user WHERE cusername ='". $uname ."' AND cpassword = '". $upass ."' limit 1 ";
 
- 			$query = mysqli_query($con, "SELECT * FROM tbl_user WHERE cpassword='$m5pass' AND cusername='$user'");
+			$result = mysql_query($sqlquery);
 
- 			$rows = mysqli_num_rows($query);
-			if($rows == 1){
- 				$_SESSION['uname'] = $user;
- 				header("Location: admin.php"); // Redirecting to other page
- 			}
- 			
- 			else{
- 				$error = "Username or Password is Invalid";
- 			}
+			if (mysql_num_rows($result) == 1) {
+				//echo "Login Success!";
+				//echo "<script type='text/javascript'>alert('Login successfully!')</script>";
+				header("Location: admin.php");
+			}
 
- 			mysqli_close($conn); // Closing connection
- 				}
- 			}
+			else{
+				echo "Login Failed! Please Try Again.";
+			}
+		}
 ?>
+</div>
+
 <html>
 <head>
 	<meta charset="utf-8">
@@ -87,6 +78,10 @@
     	background-color: #ff99cc !important;
 		}
 
+		.phpclass{
+			color: red;
+		}
+
     </style>
 </head>
 <body>
@@ -99,16 +94,16 @@
     <form action="" method="POST">
       <div class="from-group">
         <label for="username" class="sr-only"></label>
-        <input id="uname" name="uname" type="text" class="form-control">
+        <input id="username" name="username" type="text" class="form-control">
       </div>
       <p></p>
       <div class="from-group">
         <label for="password" class="sr-only"></label>
-        <input id="upass" name="upass" type="password" class="form-control">
+        <input id="userpass" name="userpass" type="password" class="form-control">
       </div>    
       <p></p>
 
-      <input type="submit" value="login" class="btn btn-primary btn-block"></button>  
+      <button type="submit" name="login" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-ok-sign"></span> Login</button>  
       <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button></div>
     </form>
 
