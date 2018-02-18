@@ -1,10 +1,9 @@
-$(document).ready(function(){
-console.log("ready!");
+$(document).ready(function () {
+    alert('ready');
 
-});
-
-//DESTINATION PREFERENCE
-
-$('#book-dp').change(function(){
-
+    $('div#booking select#book-dp').change(function (e) { 
+        e.preventDefault();
+        
+        alert('change! gawin mo dito')
+    });
 });
