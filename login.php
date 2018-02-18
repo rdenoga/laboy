@@ -5,13 +5,19 @@
 		$user = "root";
 		$pass = "";
 		$db = "db_laboybaboy";
+		$err = "";
 
 		mysql_connect($host, $user, $pass);
 		mysql_select_db($db);
-
+	
 		if (isset($_POST['username'])) {
 			$uname = $_POST['username'];
 			$upass = $_POST['userpass'];
+
+			//if (empty($uname) || empty($upass)) {
+			//	$err = "Login Failed! Enter your Username and Password!";
+			//	echo $err;
+			//}
 
 			$sqlquery = "Select * from tbl_user WHERE cusername ='". $uname ."' AND cpassword = '". $upass ."' limit 1 ";
 
@@ -24,7 +30,7 @@
 			}
 
 			else{
-				echo "Login Failed! Please Try Again.";
+				echo "You have entered an invalid Username or Password";
 			}
 		}
 ?>
@@ -34,10 +40,12 @@
 <head>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <meta name="viewport" coyjntent="width=device-width, initial-scale=1"> 
     <title>Laboy Baboy Tours</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+ 	<script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script> 
     <style>
 		body{
 			background: #ff99cc;
@@ -108,10 +116,52 @@
     </form>
 
   </div>
+<!--
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js'></script>
+<script src='http://cdnjs.cloudflare.com/ajax/libs/bootstrap-validator/0.4.5/js/bootstrapvalidator.min.js'></script>
 
+<script src="js/index.js"></script>
 <script type="text/javascript">
-	
-</script>
 
+$(document).ready(function() {
+    $('#reg_form').bootstrapValidator({
+    	fields: {
+    		username:{
+    			validators:{
+    				notEmpty: {
+                        message: 'Please Enter your Username'
+                    }
+    			}
+    		}
+
+    		password:{
+    			validators:{
+    				notEmpty:{
+    					message: 'Please Enter your Password'
+    				}
+    			}
+    		}
+
+    .on('success.form.bv', function(e) {
+            $('#success_message').slideDown({ opacity: "show" }, "slow") // Do something ...
+                $('#reg_form').data('bootstrapValidator').resetForm();
+ 
+            // Prevent form submission
+            e.preventDefault();
+ 
+            // Get the form instance
+            var $form = $(e.target);
+ 
+            // Get the BootstrapValidator instance
+            var bv = $form.data('bootstrapValidator');
+ 
+            // Use Ajax to submit form data
+            $.post($form.attr('action'), $form.serialize(), function(result) {
+                console.log(result);
+            }, 'json');
+        });
+});
+</script> -->
 </body>
 </html>
