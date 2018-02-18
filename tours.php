@@ -12,6 +12,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/admin.js"></script>
 </head>
 <body>
 
@@ -206,7 +207,7 @@
                   <h3>Tour Details</h3>
                   <hr>
                   <div class="form-group dp">
-                    <label for="book-despref" class="col-sm-2 control-label">Destination Preference</label>
+                    <label for="book-dp" class="col-sm-2 control-label">Destination Preference</label>
                     <div class="col-sm-6">
                       <select class="form-control" id="book-dp">
                         <!--query goes here-->
@@ -236,15 +237,6 @@
     </div>
 
 <script>
-  $(document).ready(function()
-  {
-    $('#book-dp').change(function(){
-        var selectedValue = $(this).val();
-        if(selectedValue) =='1');
-      $('#book-des').show();
-    });
-
-  });
 
 </script>
 
