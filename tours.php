@@ -12,11 +12,9 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
-<<<<<<< HEAD
-=======
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/admin.js"></script>
->>>>>>> d8b2337ca384fab2a5f78b853084c54a646f6bd5
+
 </head>
 <body>
 
@@ -50,7 +48,9 @@
                   <ul class="nav navbar-nav navbar-right">
                   <li><a class="link" href="#"><span class="glyphicon glyphicon-credit-card"></span> Payments</a></li>
                   <li><a class="link" href="login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                  <li><a href="#booking" data-toggle="modal"><button type="button" class="btn btn-info">Book Now</button></a></li>
                   </ul>
+
               </div>
           </div><!--e cont-->
       </nav><!--e nav-->
@@ -177,8 +177,6 @@
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
         });
       </script>
-<<<<<<< HEAD
-=======
 
     <div class="modal fade" id="booking" role="dialog">
       <div class="modal-dialog modal-lg">
@@ -218,13 +216,14 @@
                     <div class="col-sm-6">
                       <select class="form-control" id="book-dp">
                         <!--query goes here-->
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
+                        <option value=" ">Select Destination</option>
+                        <option value="1">Hiking</option>
+                        <option value="2">Beach</option>
+                        <option value="3">Heritage</option>
                       </select>
                     </div>
                   </div>
-                  <div class="form-group book-des hide">
+                  <div class="form-group book-des">
                     <label for="book-des" class="col-sm-2 control-label">Destination</label>
                     <div class="col-sm-6">
                       <select class="form-control" id="book-des">
