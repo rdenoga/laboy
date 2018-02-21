@@ -50,7 +50,7 @@ error_reporting(0);
             <li><a href="admin.php?page=export">Guests</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="">Tours</a></li>
+            <li><a href="admin.php?page=toursdb">Tours</a></li>
             <li><a href="">Coordinators</a></li>
             <li><a href="">Van Contacts</a></li>
             <li><a href="">Reports</a></li>
