@@ -8,6 +8,8 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
 <html>
 <head>
 	<title></title>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -29,7 +31,7 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
                 <td><?php echo $row['cdescription'] ?></td>
                 <td><?php echo $row['citinerary'] ?></td>
                 <td><?php echo $row['famount'] ?></td>
-                <td><a class="edit_btn" href="toursdb.php?edit=<?php echo $row['itourid']; ?>">Update</a></td>
+                <td><button class="btn btn-success"><a class="edit_btn" href="admin.php?page=update_tours.php?edit=<?php echo $row['itourid']; ?>">Update</button></a></td>
                 
             </tr>
 
@@ -38,7 +40,6 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
 
         </table>
       </div>
-
-
+    <?php echo "<div class='alert bg-green'>SUCCESS</div>"; ?>
 </body>
 </html>
