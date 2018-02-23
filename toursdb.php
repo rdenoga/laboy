@@ -12,7 +12,7 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-
+<section class="content">
 <div class="table-responsive" id="disp_data">
         <table border="1px" cellpadding="5px" cellspacing="5px" class="table table-hover">
           <tr>
@@ -31,7 +31,7 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
                 <td><?php echo $row['cdescription'] ?></td>
                 <td><?php echo $row['citinerary'] ?></td>
                 <td><?php echo $row['famount'] ?></td>
-                <td><button class="btn btn-success"><a class="edit_btn" href="admin.php?page=update_tours.php?edit=<?php echo $row['itourid']; ?>">Update</button></a></td>
+                <td><button class="btn btn-success"><a class="edit_btn" href="?page=update_tours&edit=<?php echo $row['itourid']; ?>">Update</button></a></td>
                 
             </tr>
 
@@ -40,6 +40,6 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
 
         </table>
       </div>
-    <?php echo "<div class='alert bg-green'>SUCCESS</div>"; ?>
+</section>
 </body>
 </html>

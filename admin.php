@@ -67,12 +67,17 @@ error_reporting(0);
 
                 $page = $p . ".php";
 
+                $edit_id = $_GET['edit'];
+
+
                 if(file_exists($page))
-                    include($page);
+                    include_once($page);
                 elseif($p=="")
                     header('admin.php');
                 else
                     header('admin.php');
+
+
             ?>
           </div>
             </div>
