@@ -28,7 +28,7 @@ error_reporting(0);
 					<a href="#">
 						LBT
 					</a></li>
-					<li class="active"><a href="admin.php?page=">Bookings <span class="sr-only">(current)</span></a></li>
+					<li class="active"><a href="test.php?page=">Bookings <span class="sr-only">(current)</span></a></li>
 		            <li><a href="test.php?page=reports">Lookup Category</a></li>
 		            <li><a href="test.php?page=analytics">Lookup Item</a></li>
 		            <li><a href="test.php?page=export">Guests</a></li>
