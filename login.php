@@ -6,6 +6,11 @@
 		$pass = "";
 		$db = "db_laboybaboy";
 		$err = "";
+		$l_err = "";
+		$c_val = "";
+
+		$alert_display = "none";
+		$alert_visible = "hidden";
 
 		mysql_connect($host, $user, $pass);
 		mysql_select_db($db);
@@ -14,11 +19,6 @@
 			$uname = $_POST['username'];
 			$upass = $_POST['userpass'];
 
-			//if (empty($uname) || empty($upass)) {
-			//	$err = "Login Failed! Enter your Username and Password!";
-			//	echo $err;
-			//}
-
 			$sqlquery = "Select * from tbl_user WHERE cusername ='". $uname ."' AND cpassword = '". $upass ."' limit 1 ";
 
 			$result = mysql_query($sqlquery);
@@ -26,11 +26,13 @@
 			if (mysql_num_rows($result) == 1) {
 				//echo "Login Success!";
 				//echo "<script type='text/javascript'>alert('Login successfully!')</script>";
-				header("Location: admin.php");
+				header("Location: test.php");
 			}
 
 			else{
-				echo "You have entered an invalid Username or Password";
+				$l_err = "Invalid Username or Password. Please Try Again!";
+				$alert_display = "block";
+    			$alert_visible = "visible";
 			}
 		}
 ?>
@@ -90,6 +92,11 @@
 			color: red;
 		}
 
+		.alert{
+			display: <?php echo $alert_display; ?>;
+			visibility: <?php echo $alert_visible; ?>;
+		}
+
     </style>
 </head>
 <body>
@@ -100,6 +107,13 @@
     <h3 class="title">
     </h3>
     <form action="" method="POST">
+    	<?php
+    		if (count($l_err) != 0) {
+    			echo "<div class = 'alert alert-danger'>";
+    			echo $l_err;
+    			echo "</div>";
+    		}
+    	?>
       <div class="from-group">
         <label for="username" class="sr-only"></label>
         <input id="username" name="username" type="text" class="form-control">
@@ -111,8 +125,16 @@
       </div>    
       <p></p>
 
-      <button type="submit" name="login" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-ok-sign"></span> Login</button>  
-      <a href="index.html" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button></div>
+      <button  type="submit" name="login" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-ok-sign"></span> Login</button> 
+ 
+      <a href="index.html" onclick="return clickVal()" button type="button" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-log-out"></span> Back</button></div>
+
+      	<script type='text/javascript'>
+      		function clickVal(){
+      			return confirm("Do you want to go back to Laboy Baboy Homepage?");
+      		}
+      	</script>
+      	
     </form>
 
   </div>
