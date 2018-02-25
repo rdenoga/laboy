@@ -37,6 +37,7 @@ error_reporting(0);
 		            <li><a href="">Van Contacts</a></li>
 		            <li><a href="">Reports</a></li>
 		            <li><a href="">Audit Trail</a></li>
+		            <li><a href="#">Logout</a></li>
 			</ul>
 		</div>
 		<!--end sw-->

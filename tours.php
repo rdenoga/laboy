@@ -1,8 +1,13 @@
 <!DOCTYPE html>
+<?php
+include ('config/init.php');
+?>
+
+
 <html>
 <head>
 
-	<meta charset="utf-8">
+	 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
    
@@ -56,8 +61,8 @@
       </nav><!--e nav-->
 
 
-      <!--HIKING SAMPLE-->
-       <div class="container">
+<!--HIKING SAMPLE-->
+<div class="container">
         <section>
             <div class="page-header" id="Hiking">
               <h2>Hiking</h2><small>List of places available for Hiking</small>
@@ -92,10 +97,10 @@
                   <footer>Yumi</footer>
               </div>
             </div><!--end row-->
-    </div> 
+</div> 
 
-        <!--Beach SAMPLE-->
-       <div class="container">
+<!--Beach SAMPLE-->
+<div class="container">
         <section>
             <div class="page-header" id="Beach">
               <h2>Beach</h2><small>List of places available for Hiking</small>
@@ -130,10 +135,10 @@
                   <footer>Yumi</footer>
               </div>
             </div><!--end row-->
-    </div>
+</div>
 
-          <!--HERITAGE SAMPLE-->
-       <div class="container">
+<!--HERITAGE SAMPLE-->
+<div class="container">
         <section>
             <div class="page-header" id="Heritage">
               <h2>Heritage</h2><small>List of places available for Hiking</small>
@@ -161,7 +166,7 @@
                   <footer>Yumi</footer>
               </div>
             </div><!--end row-->
-    </div>   
+</div>   
 
 
 
@@ -170,13 +175,31 @@
     
     <script src="js/bootstrap.min.js"></script>
 
-    <script type="text/JavaScript">
+<script type="text/JavaScript">
         $('ul.nav li.dropdown').hover(function() {
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeIn(300);
         }, function() {
           $(this).find('.dropdown-menu').stop(true, true).delay(200).fadeOut(300);
         });
-      </script>
+</script>
+
+
+
+<!--SELECTING DESTINATION-->
+<?php
+  $query1 = "SELECT cdescription from tbl_tours WHERE itourtypeid='2';";
+
+  $result1 = mysqli_query($con,$query1);
+
+        $opt1 ="<select name='hiking'>";
+        while($row=mysqli_fetch_assoc($result1)){
+        $opt1 .= "<option value='{$row['cdescription']}'>{$row['cdescription']}</option>";
+        }
+        $opt1 .="</select>";
+?>
+
+
+
 
     <div class="modal fade" id="booking" role="dialog">
       <div class="modal-dialog modal-lg">
@@ -194,18 +217,12 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="book-name" class="col-sm-2 control-label">Address</label>
-                  <div class="col-sm-10">
-                    <input type="text" class="form-control" id="book-name" placeholder="Address">
-                  </div>
-                </div>
-                <div class="form-group">
                   <label for="book-name" class="col-sm-2 control-label">Contact Number</label>
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="book-name" placeholder="Contact Number">
+                    <input type="text" class="form-control" id="book-num1" placeholder="Contact Number">
                   </div>
                   <div class="col-sm-5">
-                    <input type="text" class="form-control" id="book-name" placeholder="Optional">
+                    <input type="text" class="form-control" id="book-num2" placeholder="Optional">
                   </div>
                   </div>
                   <hr>
@@ -226,12 +243,7 @@
                   <div class="form-group book-des">
                     <label for="book-des" class="col-sm-2 control-label">Destination</label>
                     <div class="col-sm-6">
-                      <select class="form-control" id="book-des">
-                        <!--query goes here-->
-                        <option>1</option>
-                        <option>2</option>
-                        <option>3</option>
-                      </select>
+                      
                     </div>
                   </div>
 
@@ -242,8 +254,10 @@
       </div>
     </div>
 
-<script>
 
+
+
+<script>
 </script>
 
 

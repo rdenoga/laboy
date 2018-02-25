@@ -12,6 +12,7 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+	<!--DISPLAYING TABLE-->
 <section class="content">
 <div class="table-responsive" id="disp_data">
         <table border="1px" cellpadding="5px" cellspacing="5px" class="table table-hover">
@@ -41,5 +42,7 @@ $res = mysqli_query($con, "SELECT * from tbl_tours");
         </table>
       </div>
 </section>
+
+<!--END DISPLAY-->
 </body>
 </html>
