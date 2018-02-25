@@ -75,22 +75,6 @@ blockquote {
 	text-align: center;
 }
 
-.laboy-side {
-
-	padding-top: 20px;
-	margin-top: 10px;
-
-}
-
-.laboy-side li {
-	background:#ff99cc;
-	opacity: 0.9;
-}
-
-.laboy-side li a:hover{
-	background:#ffffff;
-}
-
 .modal-header hr {
 
 	display: block;

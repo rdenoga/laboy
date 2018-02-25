@@ -8,6 +8,7 @@ if(isset($_GET['edit'])){
 	$rec = mysqli_query($con, "SELECT * from tbl_tours WHERE itourid = $id");
 	$rec_data = mysqli_fetch_array($rec);
 	$itinerary = $rec_data['cdescription']; //tourname - wala pang itinerary
+	
 	$amount = $rec_data['famount'];
 }
 
@@ -27,6 +28,9 @@ if(isset($_GET['edit'])){
 
 </head>
 <body>
+	<?php
+	
+	?>
 
 </body>
 </html>
